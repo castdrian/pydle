@@ -1,4 +1,5 @@
 from random import randrange
+from src.grid import draw_blank_grid
 
 def get_word() -> str:
     try:
@@ -13,3 +14,12 @@ def get_word() -> str:
     except OSError:
         print('Couldn\'t find words.txt')
         exit()
+
+def await_input(word: str) -> str:
+    guess = input().lower()
+
+    while len(guess) != len(word):
+        draw_blank_grid(word)
+        guess = input().lower()
+
+    return guess
