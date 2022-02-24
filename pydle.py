@@ -1,6 +1,7 @@
 from src.grid import draw_grid
+from src.parse import get_word
 
-word = 'boobs'
+word = get_word()
 amount = 6
 
 draw_grid(word)
