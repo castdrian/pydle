@@ -1,4 +1,4 @@
-from grid import draw_grid
+from src.grid import draw_grid
 
 word = 'boobs'
 amount = 6
