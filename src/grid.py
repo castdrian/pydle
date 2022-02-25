@@ -14,7 +14,7 @@ def draw_blank_grid(word: str):
     print(tabulate(grid_data, tablefmt = 'fancy_grid'))
 
 
-def update_grid(word: str, guess_list: list[str], amt: int):
+def update_grid(word: str, guess_list: list[str]):
     os.system('cls||clear')
     print('Pydle\nWordle, but Python\n')
 
