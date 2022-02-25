@@ -6,7 +6,7 @@ word = get_word().lower()
 amount = 6
 guess_list = []
 
-init(autoreset = True)
+init()
 draw_blank_grid(word)
 
 while amount != 0:
