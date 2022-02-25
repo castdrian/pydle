@@ -1,5 +1,4 @@
 import os
-from colorama import Fore
 from tabulate import tabulate
 
 def draw_blank_grid(word: str):
@@ -19,7 +18,6 @@ def update_grid(word: str, guess_list: list[str], amt: int):
     os.system('cls||clear')
     print('Pydle\nWordle, but Python\n')
 
-    current_guess = guess_list[len(guess_list) - 1]
     grid_data = []
     column_data = []
 
@@ -31,8 +29,6 @@ def update_grid(word: str, guess_list: list[str], amt: int):
         grid_data[idx] = word_data
 
     print(tabulate(grid_data, tablefmt = 'fancy_grid'))
-
-
 
     """ if len(guess_list) == 1:
         if current_guess == word:
