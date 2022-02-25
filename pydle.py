@@ -10,12 +10,10 @@ init()
 draw_blank_grid(word)
 
 while amount != 0:
-    guess = await_input(word).lower()
     amount = amount - 1
+    guess = await_input(word, guess_list, amount).lower()
     guess_list.append(guess)
-
-    if guess == word:
-        update_grid(word, guess_list, amount)
+    update_grid(word, guess_list, amount)
 
 print(f'You lose!\nThe word was {word}')
 exit()
