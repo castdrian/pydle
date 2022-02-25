@@ -15,10 +15,7 @@ while amount != 0:
     guess_list.append(guess)
 
     if guess == word:
-        print('You won!')
-        exit()
-
-    update_grid(word, guess_list, amount)
+        update_grid(word, guess_list, amount)
 
 print(f'You lose!\nThe word was {word}')
 exit()
