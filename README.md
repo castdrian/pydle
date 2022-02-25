@@ -1,4 +1,4 @@
 # pydle
 Wordle, but Python
 
-![](https://cdn.adriancastro.dev/KfrQH2D.png)
+![](https://cdn.adriancastro.dev/eaX9b1K.png)

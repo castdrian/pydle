@@ -1,5 +1,6 @@
 import os
 from tabulate import tabulate
+from src.logic import apply_colors
 
 def draw_blank_grid(word: str):
     os.system('cls||clear')
@@ -25,20 +26,8 @@ def update_grid(word: str, guess_list: list[str]):
     for y in range(6): grid_data.append(column_data)
 
     for idx, val in enumerate(guess_list):
-        word_data = [char for char in val]
+        word_data = apply_colors(word, val)
         grid_data[idx] = word_data
 
     print(tabulate(grid_data, tablefmt = 'fancy_grid'))
-
-    """ if len(guess_list) == 1:
-        if current_guess == word:
-            
-            word_data = []
-
-            for char in word: word_data.append(f'{Fore.GREEN}{char}{Fore.RESET}')
-            
-            grid_data[len(guess_list) - 1] = word_data
-            print(tabulate(grid_data, tablefmt = 'fancy_grid'))
-            print('You won!')
-            exit() """
 
